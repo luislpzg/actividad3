@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <!-- Team Member 1 -->
+    <div class="col-4" style="margin-top: 71px;">
+      <div class="card border-0 shadow">
+        <img src="{{ artista.foto }}" class="card-img-top">
+        <div class="card-body text-center">
+          <h5 class="card-title mb-0">{{artista.nombre}}</h5>
+          <div class="card-text text-black-50">{{artista.lugar_nacimiento}}</div>
+        </div>
+      </div>
+    </div> <!-- fin col-4 -->
+    <div class="col-8">
+
+      <h2 class="" style="margin-top: 10px;">Exitos</h2>
+
+      <div class="row">
+        <div class="col-4" *ngFor="let cancion of artista.canciones">
+         
+         
+          <app-cancion [cancion]="cancion" ></app-cancion>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
